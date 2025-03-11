@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  }
+  .app-container {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .todo-container {
+  margin-top: 20px;
+  }
+  input {
+  padding: 8px;
+  margin-right: 10px;
+  }
+  button {
+  padding: 8px;
+  cursor: pointer;
+  }
+  
+  :root {
+      --bg-color: #fff;
+      --text-color: #000;
+      --button-bg: #ddd;
+      --button-text: #000;
+      --task-bg: #f9f9f9;
+      --task-text: #333;
+  }
+  
+  .dark-mode {
+      --bg-color: #333;
+      --text-color: #fff;
+      --button-bg: #555;
+      --button-text: #fff;
+      --task-bg: #444;
+      --task-text: #ddd;
+  }
+  
+  body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+  }
+  
+  h2 {
+      text-align: center;
+  }
+  
+  button {
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+  }
+  
+  button:hover {
+      opacity: 0.8;
+  }
+  
+  ul {
+      list-style: none;
+      padding: 0;
+  }
+  
+  li {
+      background-color: var(--task-bg);
+      color: var(--task-text);
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background-color 0.3s, color 0.3s;
+  }
+  
+  li input[type="text"] {
+      margin-right: 10px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+  }
+  
+  input[type="checkbox"] {
+      margin-right: 10px;
+  }
+  .task-text {
+      font-size: 1.5rem;
+  }
