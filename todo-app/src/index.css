@@ -1,102 +1,161 @@
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f8f9fa;
-  }
-  .app-container {
-  text-align: center;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  .todo-container {
-  margin-top: 20px;
-  }
-  input {
-  padding: 8px;
-  margin-right: 10px;
-  }
-  button {
-  padding: 8px;
-  cursor: pointer;
-  }
-  
-  :root {
-      --bg-color: #fff;
-      --text-color: #000;
-      --button-bg: #ddd;
-      --button-text: #000;
-      --task-bg: #f9f9f9;
-      --task-text: #333;
+/* Add these to your index.css file */
+:root {
+    --bg-color: #f8f8f8;
+    --text-color: #333;
+    --primary-color: #4caf50;
+    --secondary-color: #f44336;
+    --hover-color: #e0e0e0;
+    --completed-color: #888;
+    --border-color: #ddd;
   }
   
   .dark-mode {
-      --bg-color: #333;
-      --text-color: #fff;
-      --button-bg: #555;
-      --button-text: #fff;
-      --task-bg: #444;
-      --task-text: #ddd;
+    --bg-color: #2d2d2d;
+    --text-color: #f0f0f0;
+    --primary-color: #66bb6a;
+    --secondary-color: #ef5350;
+    --hover-color: #444;
+    --completed-color: #aaa;
+    --border-color: #555;
   }
   
   body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      transition: background-color 0.3s, color 0.3s;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
   }
   
-  h2 {
-      text-align: center;
+  .todo-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
   }
   
-  button {
-      background-color: var(--button-bg);
-      color: var(--button-text);
-      border: none;
-      padding: 10px;
-      margin: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s, color 0.3s;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
-  button:hover {
-      opacity: 0.8;
+  .toggle-theme {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
   
-  ul {
-      list-style: none;
-      padding: 0;
+  .task-input {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
   }
   
-  li {
-      background-color: var(--task-bg);
-      color: var(--task-text);
-      padding: 10px;
-      margin: 5px 0;
-      border-radius: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: background-color 0.3s, color 0.3s;
+  .add-button {
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
   
-  li input[type="text"] {
-      margin-right: 10px;
-      padding: 5px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
+  .filters {
+    display: flex;
+    margin: 20px 0;
   }
   
-  input[type="checkbox"] {
-      margin-right: 10px;
+  .filters button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--text-color);
   }
+  
+  .filters button.active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .task-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+  }
+  
+  .task-list li:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .completed .task-text {
+    text-decoration: line-through;
+    color: var(--completed-color);
+  }
+  
+  .task-content {
+    display: flex;
+    align-items: center;
+  }
+  
   .task-text {
-      font-size: 1.5rem;
+    margin-left: 10px;
+  }
+  
+  .task-actions button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .edit-button {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .delete-button {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .edit-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .edit-input {
+    padding: 5px;
+    flex-grow: 1;
+    margin-right: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .save-button {
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }

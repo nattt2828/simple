@@ -1,6 +1,6 @@
 {
   "name": "todo-app",
-  "homepage": "https://nattt2828.github.io/todo-app/",
+  "homepage": "https://nattt2828.github.io/simple/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -25,6 +25,6 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
-    "vite": "^6.2.0"
+    "vite": "^6.3.2"
   }
 }
