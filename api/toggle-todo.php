@@ -1,13 +1,13 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-    header("Access-Control-Allow-Origin: http://localhost:5173");
+    header("Access-Control-Allow-Origin: http://localhost:5173", "https://nattt2828.github.io");
     header("Access-Control-Allow-Headers: Content-Type");
     header("Access-Control-Allow-Methods: PATCH, OPTIONS");
     exit(0);
 }
 
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: http://localhost:5173');
+header('Access-Control-Allow-Origin: http://localhost:5173', "https://nattt2828.github.io");
 header('Access-Control-Allow-Headers: Content-Type');
 header('Access-Control-Allow-Methods: PATCH');
 
